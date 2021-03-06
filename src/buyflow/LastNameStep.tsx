@@ -8,8 +8,11 @@ const LastNameStep: React.FC<LastNameStepProps> = (props) => {
     const [lastName, setLastName] = useState('');
     return <>
         <div>Last Name: <input type='string' onChange={({target: {value}}) => {setLastName(value)}} value={lastName}></input></div>
-        <button onClick={() => props.cb('lastName', lastName)}>Next</button>
+        <button onClick={() => onClickNext()}>Next</button>
     </>;
+    function onClickNext(){
+        props.cb('lastName', lastName)
+    }
 };
 
 export default LastNameStep;

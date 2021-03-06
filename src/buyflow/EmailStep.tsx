@@ -8,8 +8,11 @@ const EmailStep: React.FC<EmailStepProps> = (props) => {
     const [email, setEmail] = useState('');
     return <>
         <div>Email: <input type='email' onChange={({target: {value}}) => {setEmail(value)}} value={email}></input></div>
-        <button onClick={() => props.cb('email', email)}>Next</button>
+        <button onClick={() => onClickNext()}>Next</button>
     </>;
+    function onClickNext(){
+        props.cb('email', email)
+    }
 };
 
 export default EmailStep;

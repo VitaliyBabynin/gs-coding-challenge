@@ -31,6 +31,7 @@ const Buyflow: React.FC<BuyflowProps> = (props) => {
             setStep(nextStep);
         }
     );
+    console.log(collectedData);
     return <>
         <h4>Buying {PRODUCT_IDS_TO_NAMES[props.productId]}</h4>
         {(currentStep === 'firstName' && <FirstNameStep cb={getStepCallback('lastName')} />)
