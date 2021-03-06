@@ -11,7 +11,9 @@ const EmailStep: React.FC<EmailStepProps> = (props) => {
 
     return <>
         <div className={'warning'}>{warningMessage}</div>
-        <div>{fieldName}: <input type='email' onChange={({target: {value}}) => {setEmail(value)}} value={email}></input></div>
+        <div>{fieldName}: <input type='email' onChange={({target: {value}}) => {
+            setEmail(value)
+        }} value={email}/></div>
         <button onClick={() => onClickNext()}>Next</button>
     </>;
 

@@ -7,7 +7,7 @@ import SummaryStep from './SummaryStep';
 
 interface BuyflowProps {
     productId: ProductIds,
-};
+}
 
 export enum ProductIds {
     devIns = 'dev_ins'
@@ -15,7 +15,7 @@ export enum ProductIds {
 
 const PRODUCT_IDS_TO_NAMES= {
     [ProductIds.devIns]: 'Developer Insurance',
-}
+};
 
 const Buyflow: React.FC<BuyflowProps> = (props) => {
     const [currentStep, setStep] = useState('firstName');
@@ -31,7 +31,6 @@ const Buyflow: React.FC<BuyflowProps> = (props) => {
             setStep(nextStep);
         }
     );
-    console.log(collectedData);
     return <>
         <h4>Buying {PRODUCT_IDS_TO_NAMES[props.productId]}</h4>
         {(currentStep === 'firstName' && <FirstNameStep cb={getStepCallback('lastName')} />)

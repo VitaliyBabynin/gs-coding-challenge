@@ -11,7 +11,9 @@ const AgeStep: React.FC<AgeStepProps> = (props) => {
 
     return <>
         <div className={'warning'}>{warningMessage}</div>
-        <div>{fieldName}: <input type='number' onChange={({target: {value}}) => {setAge(Number(value))}} value={age}></input></div>
+        <div>{fieldName}: <input type='number' onChange={({target: {value}}) => {
+            setAge(Number(value))
+        }} value={age}/></div>
         <button onClick={() => onClickNext()}>Next</button>
     </>;
 

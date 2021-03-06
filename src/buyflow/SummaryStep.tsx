@@ -8,7 +8,7 @@ interface SummaryStepProps {
         email: string,
         age: number,
     },
-};
+}
 
 const SummaryStep: React.FC<SummaryStepProps> = (props) => {
     return <>

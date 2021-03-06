@@ -11,7 +11,9 @@ const FirstNameStep: React.FC<FirstNameStepProps> = (props) => {
 
     return <>
         <div className={'warning'}>{warningMessage}</div>
-        <div>{fieldName}: <input type='string' onChange={({target: {value}}) => {setFirstName(value)}} value={firstName}></input></div>
+        <div>{fieldName}: <input type='string' onChange={({target: {value}}) => {
+            setFirstName(value)
+        }} value={firstName}/></div>
         <button onClick={() => onClickNext()}>Next</button>
     </>;
 
